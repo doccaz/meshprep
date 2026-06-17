@@ -69,7 +69,7 @@ export default function ThreeViewer({
       0.1,
       1000
     );
-    camera.position.set(40, 50, 70);
+    camera.position.set(48, 48, 48); // default perspective (isometric diagonal)
     cameraRef.current = camera;
 
     // C. Setup WebGL Renderer with antialiasing

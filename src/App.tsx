@@ -57,8 +57,8 @@ export default function App() {
   const [thickenMode, setThickenMode] = useState<'uniform' | 'xy-only' | 'z-only'>('uniform');
   
   // Interactive material aesthetics
-  const [materialColor, setMaterialColor] = useState<string>("#f97316"); // Default vibrant Sunset Orange
-  const [materialFinish, setMaterialFinish] = useState<'matte' | 'metal' | 'shiny' | 'translucent'>('matte');
+  const [materialColor, setMaterialColor] = useState<string>("#22c55e"); // Default green
+  const [materialFinish, setMaterialFinish] = useState<'matte' | 'metal' | 'shiny' | 'translucent'>('translucent');
   
   // Viewport Settings
   const [wireframe, setWireframe] = useState<boolean>(false);
