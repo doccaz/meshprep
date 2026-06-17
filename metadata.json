@@ -1,0 +1,6 @@
+{
+  "name": "3D Model Adjuster & STL Exporter",
+  "description": "An interactive CAD tool to adjust, scale, custom-thicken walls of OBJ models, and export optimized binary STL files ready for 3D printing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

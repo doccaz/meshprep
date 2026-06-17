@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Dark background -->
+  <rect width="64" height="64" rx="12" fill="#0a0b0e"/>
+
+  <!-- 3D cube isometric — top face -->
+  <polygon points="32,6 54,18 32,30 10,18" fill="#15803d"/>
+
+  <!-- Left face -->
+  <polygon points="10,18 32,30 32,54 10,42" fill="#166534"/>
+
+  <!-- Right face -->
+  <polygon points="54,18 32,30 32,54 54,42" fill="#14532d"/>
+
+  <!-- Layer lines on left face (FDM slicing hint) -->
+  <line x1="10" y1="24" x2="32" y2="36" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.6"/>
+  <line x1="10" y1="30" x2="32" y2="42" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.6"/>
+  <line x1="10" y1="36" x2="32" y2="48" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.6"/>
+
+  <!-- Layer lines on right face -->
+  <line x1="54" y1="24" x2="32" y2="36" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.4"/>
+  <line x1="54" y1="30" x2="32" y2="42" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.4"/>
+  <line x1="54" y1="36" x2="32" y2="48" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.4"/>
+
+  <!-- Bright edges -->
+  <polyline points="10,18 32,6 54,18" stroke="#22c55e" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="32" y1="6" x2="32" y2="30" stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="10" y1="18" x2="10" y2="42" stroke="#22c55e" stroke-width="1.5"/>
+  <line x1="54" y1="18" x2="54" y2="42" stroke="#22c55e" stroke-width="1.5"/>
+  <polyline points="10,42 32,54 54,42" stroke="#22c55e" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="32" y1="30" x2="32" y2="54" stroke="#22c55e" stroke-width="1" stroke-opacity="0.5"/>
+</svg>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Elegant custom scrollbar for technical dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* ─── Theme System ──────────────────────────────────────────────────── */
+
+:root,
+[data-theme="cyber"] {
+  --accent: #06b6d4;
+  --accent-dim: #0e7490;
+}
+
+[data-theme="void"] {
+  --accent: #8b5cf6;
+  --accent-dim: #6d28d9;
+}
+
+[data-theme="matrix"] {
+  --accent: #22c55e;
+  --accent-dim: #15803d;
+}
+
+[data-theme="forge"] {
+  --accent: #f59e0b;
+  --accent-dim: #b45309;
+}
+
+/* Custom accent text utility (replaces text-[#06b6d4] arbitrary class) */
+.text-accent {
+  color: var(--accent, #06b6d4);
+}
+
+/* ─── Fork me on GitHub ribbon ──────────────────────────────────────── */
+
+.fork-ribbon {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  z-index: 1000;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.fork-ribbon span {
+  position: absolute;
+  bottom: 28px;
+  right: -42px;
+  width: 168px;
+  padding: 7px 0;
+  background: var(--accent, #06b6d4);
+  color: #0a0b0e;
+  font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+/* ─── Non-cyber theme overrides for Tailwind cyan utilities ─────────── */
+
+/* Text colors */
+[data-theme="void"]   .text-cyan-300,
+[data-theme="void"]   .text-cyan-400,
+[data-theme="void"]   .text-cyan-500,
+[data-theme="void"]   .text-cyan-600 { color: #8b5cf6 !important; }
+
+[data-theme="matrix"] .text-cyan-300,
+[data-theme="matrix"] .text-cyan-400,
+[data-theme="matrix"] .text-cyan-500,
+[data-theme="matrix"] .text-cyan-600 { color: #22c55e !important; }
+
+[data-theme="forge"]  .text-cyan-300,
+[data-theme="forge"]  .text-cyan-400,
+[data-theme="forge"]  .text-cyan-500,
+[data-theme="forge"]  .text-cyan-600 { color: #f59e0b !important; }
+
+/* Hover text colors */
+[data-theme="void"]   .hover\:text-cyan-400:hover,
+[data-theme="void"]   .hover\:text-cyan-300:hover { color: #a78bfa !important; }
+[data-theme="matrix"] .hover\:text-cyan-400:hover,
+[data-theme="matrix"] .hover\:text-cyan-300:hover { color: #4ade80 !important; }
+[data-theme="forge"]  .hover\:text-cyan-400:hover,
+[data-theme="forge"]  .hover\:text-cyan-300:hover { color: #fbbf24 !important; }
+
+/* Border colors */
+[data-theme="void"]   .border-cyan-400,
+[data-theme="void"]   .border-cyan-500,
+[data-theme="void"]   .border-cyan-600,
+[data-theme="void"]   .border-cyan-800 { border-color: #8b5cf6 !important; }
+
+[data-theme="matrix"] .border-cyan-400,
+[data-theme="matrix"] .border-cyan-500,
+[data-theme="matrix"] .border-cyan-600,
+[data-theme="matrix"] .border-cyan-800 { border-color: #22c55e !important; }
+
+[data-theme="forge"]  .border-cyan-400,
+[data-theme="forge"]  .border-cyan-500,
+[data-theme="forge"]  .border-cyan-600,
+[data-theme="forge"]  .border-cyan-800 { border-color: #f59e0b !important; }
+
+/* Borders with opacity */
+[data-theme="void"]   .border-cyan-500\/30 { border-color: rgba(139, 92, 246, 0.30) !important; }
+[data-theme="void"]   .border-cyan-500\/60 { border-color: rgba(139, 92, 246, 0.60) !important; }
+[data-theme="void"]   .border-cyan-400\/40 { border-color: rgba(139, 92, 246, 0.40) !important; }
+[data-theme="void"]   .border-cyan-800\/80 { border-color: rgba(109, 40, 217, 0.80) !important; }
+
+[data-theme="matrix"] .border-cyan-500\/30 { border-color: rgba(34, 197, 94, 0.30) !important; }
+[data-theme="matrix"] .border-cyan-500\/60 { border-color: rgba(34, 197, 94, 0.60) !important; }
+[data-theme="matrix"] .border-cyan-400\/40 { border-color: rgba(34, 197, 94, 0.40) !important; }
+[data-theme="matrix"] .border-cyan-800\/80 { border-color: rgba(20, 184, 166, 0.80) !important; }
+
+[data-theme="forge"]  .border-cyan-500\/30 { border-color: rgba(245, 158, 11, 0.30) !important; }
+[data-theme="forge"]  .border-cyan-500\/60 { border-color: rgba(245, 158, 11, 0.60) !important; }
+[data-theme="forge"]  .border-cyan-400\/40 { border-color: rgba(245, 158, 11, 0.40) !important; }
+[data-theme="forge"]  .border-cyan-800\/80 { border-color: rgba(180, 83,  9, 0.80) !important; }
+
+/* Hover border colors */
+[data-theme="void"]   .hover\:border-cyan-400:hover { border-color: #8b5cf6 !important; }
+[data-theme="matrix"] .hover\:border-cyan-400:hover { border-color: #22c55e !important; }
+[data-theme="forge"]  .hover\:border-cyan-400:hover { border-color: #f59e0b !important; }
+
+/* Focus border colors */
+[data-theme="void"]   .focus\:border-cyan-500:focus { border-color: #8b5cf6 !important; }
+[data-theme="matrix"] .focus\:border-cyan-500:focus { border-color: #22c55e !important; }
+[data-theme="forge"]  .focus\:border-cyan-500:focus { border-color: #f59e0b !important; }
+
+/* Main button backgrounds */
+[data-theme="void"]   .bg-cyan-600                  { background-color: #7c3aed !important; }
+[data-theme="void"]   .hover\:bg-cyan-500:hover      { background-color: #6d28d9 !important; }
+[data-theme="matrix"] .bg-cyan-600                  { background-color: #16a34a !important; }
+[data-theme="matrix"] .hover\:bg-cyan-500:hover      { background-color: #15803d !important; }
+[data-theme="forge"]  .bg-cyan-600                  { background-color: #d97706 !important; }
+[data-theme="forge"]  .hover\:bg-cyan-500:hover      { background-color: #b45309 !important; }
+
+/* Active/hover tinted backgrounds */
+[data-theme="void"]   .bg-cyan-950\/20  { background-color: rgba(76, 29, 149, 0.20) !important; }
+[data-theme="void"]   .bg-cyan-950\/25  { background-color: rgba(76, 29, 149, 0.25) !important; }
+[data-theme="void"]   .bg-cyan-950\/35  { background-color: rgba(76, 29, 149, 0.35) !important; }
+[data-theme="void"]   .bg-cyan-950\/55  { background-color: rgba(76, 29, 149, 0.55) !important; }
+
+[data-theme="matrix"] .bg-cyan-950\/20  { background-color: rgba(5,  46, 22,  0.20) !important; }
+[data-theme="matrix"] .bg-cyan-950\/25  { background-color: rgba(5,  46, 22,  0.25) !important; }
+[data-theme="matrix"] .bg-cyan-950\/35  { background-color: rgba(5,  46, 22,  0.35) !important; }
+[data-theme="matrix"] .bg-cyan-950\/55  { background-color: rgba(5,  46, 22,  0.55) !important; }
+
+[data-theme="forge"]  .bg-cyan-950\/20  { background-color: rgba(69, 26,  3,  0.20) !important; }
+[data-theme="forge"]  .bg-cyan-950\/25  { background-color: rgba(69, 26,  3,  0.25) !important; }
+[data-theme="forge"]  .bg-cyan-950\/35  { background-color: rgba(69, 26,  3,  0.35) !important; }
+[data-theme="forge"]  .bg-cyan-950\/55  { background-color: rgba(69, 26,  3,  0.55) !important; }
+
+/* Range slider accent color */
+[data-theme="void"]   .accent-cyan-500 { accent-color: #8b5cf6 !important; }
+[data-theme="matrix"] .accent-cyan-500 { accent-color: #22c55e !important; }
+[data-theme="forge"]  .accent-cyan-500 { accent-color: #f59e0b !important; }
