@@ -346,9 +346,7 @@ export default function App() {
       {/* Premium Top Navigation Row */}
       <header id="app_header" className="border-b border-[#23262d] bg-[#101218] sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-tr from-cyan-600 to-indigo-500 p-2 rounded-none text-white shadow-lg shadow-cyan-500/10">
-            <Layers className="w-5 h-5" />
-          </div>
+          <img src="/meshprep/favicon.svg" alt="MeshPrep" className="w-9 h-9" />
           <div>
             <h1 className="font-display font-medium tracking-wider text-sm text-cyan-400 uppercase">
               MeshPrep — 3D Print Optimizer & STL Editor
@@ -1035,9 +1033,7 @@ export default function App() {
             {/* Dialog header */}
             <div className="flex items-center justify-between p-5 border-b border-[#23262d]">
               <div className="flex items-center gap-3">
-                <div className="bg-gradient-to-tr from-cyan-600 to-indigo-500 p-2 text-white">
-                  <Layers className="w-4 h-4" />
-                </div>
+                <img src="/meshprep/favicon.svg" alt="MeshPrep" className="w-8 h-8" />
                 <div>
                   <h2 className="font-display font-medium text-slate-200 text-sm uppercase tracking-widest">
                     3D Print Optimizer &amp; STL Editor
