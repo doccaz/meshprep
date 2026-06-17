@@ -2,6 +2,8 @@
 
 **v1.0.0** — A browser-based 3D model viewer and optimizer for FDM/SLA 3D printing preparation. Runs entirely in the browser — no installation, no server, no dependencies beyond a modern web browser.
 
+**[Try it live →](https://doccaz.github.io/meshprep/)**
+
 ## Features
 
 - **Load OBJ models** — drag & drop or file picker for Wavefront `.obj` files
